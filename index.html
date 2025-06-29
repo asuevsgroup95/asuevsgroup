@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AsuevsGroup – Umzug & Entrümpelung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  function switchLanguage(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+    });
+    localStorage.setItem('language', lang);
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language') || 'de';
+    switchLanguage(savedLang);
+  });
+</script>
+  <style>
+    .icon-text {
+      font-size: 48px;
+      line-height: 1;
+      margin: 0 auto 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    .bulldozer {
+      animation: bulldoze 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes bulldoze {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(8px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans transition duration-300" id="body">
+<!-- HTML content truncated for brevity -->
+</body>
+</html>
